@@ -11,12 +11,14 @@
         let playerScore = 0;
         let computerScore = 0;
 
+        // Randomly generate choice 
         function getComputerChoice() {
             let options = ["rock", "paper", "scissors"];
             let computerChoice = options[Math.floor(Math.random() * options.length)];
             return computerChoice;
         }
 
+        // Play one round 
         function playRound(playerSelection, computerSelection) {
             playerSelection = playerSelection.toLowerCase();
             if (playerSelection == "rock" && computerSelection == "paper"){
@@ -48,6 +50,7 @@
             }
         }
 
+        // Determine and print winner
         function printWinner(player, computer) {
             if (player > computer){
                 console.log("You Win!");
@@ -60,16 +63,23 @@
             }
         }
 
+        // Repeat playRound by x amount of times
         function game(rounds) {
             for (let i = 1; i <= rounds; i++){
+                // Get player choice
                 let playerChoice = prompt("Enter your choice");
+                // Get computer choice 
                 let computerChoice = getComputerChoice();
+                // Print computer choice 
                 console.log("Computer: " + computerChoice);
+                // Print curent round and result of round
                 console.log("Game " + i + " : " + playRound(playerChoice, computerChoice));
+                // Print current score of player and computer
                 console.log("Player score: " + playerScore + "\t" + "Computer score: " + computerScore);
             }
         }
         
+        // Play 5 games
         game(5);
         printWinner(playerScore, computerScore);
     </script>
