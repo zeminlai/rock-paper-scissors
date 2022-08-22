@@ -1,0 +1,79 @@
+
+body {
+    background-color: #333333;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+h1 {
+    background-color:#043b5c;
+    color:aliceblue;
+    margin: 0;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+img {
+    width: 100px;
+    height: auto;
+}
+/* Footer Section */
+.footer {
+    background-color:#043b5c;
+}
+
+.footer div {
+    color: white;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* Main Section */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 1;
+}
+
+/* Computer Section */
+.computer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.computer-section .player-title,
+.scoreboard div,
+.player-section .player-title {
+    color: white;
+    text-align: center;
+}
+
+/* Player Section */
+.player-title {
+    text-align: center;
+}
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+    gap: 15px;
+}
+
+.container div {
+    border: 5px solid white;
+    flex: 1;
+    border-radius: 10px;
+}
+
+.container div:hover {
+    transform:scale(1.05);
+}

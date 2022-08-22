@@ -1,87 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
-</head>
-<body>
-    <script>
-        let playerScore = 0;
-        let computerScore = 0;
-
-        // Randomly generate choice 
-        function getComputerChoice() {
-            let options = ["rock", "paper", "scissors"];
-            let computerChoice = options[Math.floor(Math.random() * options.length)];
-            return computerChoice;
-        }
-
-        // Play one round 
-        function playRound(playerSelection, computerSelection) {
-            playerSelection = playerSelection.toLowerCase();
-            if (playerSelection == "rock" && computerSelection == "paper"){
-                computerScore++;
-                return "You Lose! Paper beats Rock";
-            }
-            else if (playerSelection == "paper" && computerSelection == "rock") {
-                playerScore++;
-                return "You Win! Paper beats Rock";
-            }
-            else if (playerSelection == "paper" && computerSelection == "scissors") {
-                computerScore++;
-                return "You Lose! Scissors beats Paper";
-            }
-            else if (playerSelection == "scissors" && computerSelection == "paper") {
-                playerScore++;
-                return "You Win! Scissors beats Paper";
-            }
-            else if (playerSelection == "scissors" && computerSelection == "rock") {
-                computerScore++;
-                return "You Lose! Rock beats Scissors";
-            }
-            else if (playerSelection == "rock" && computerSelection == "scissors") {
-                playerScore++;
-                return "You Win! Rock beats Scissors";
-            }
-            else {
-                return "Draw";
-            }
-        }
-
-        // Determine and print winner
-        function printWinner(player, computer) {
-            if (player > computer){
-                console.log("You Win!");
-            }
-            else if (computer > player){
-                console.log("You Lost");
-            }
-            else {
-                console.log("Its a draw");
-            }
-        }
-
-        // Repeat playRound by x amount of times
-        function game(rounds) {
-            for (let i = 1; i <= rounds; i++){
-                // Get player choice
-                let playerChoice = prompt("Enter your choice");
-                // Get computer choice 
-                let computerChoice = getComputerChoice();
-                // Print computer choice 
-                console.log("Computer: " + computerChoice);
-                // Print curent round and result of round
-                console.log("Game " + i + " : " + playRound(playerChoice, computerChoice));
-                // Print current score of player and computer
-                console.log("Player score: " + playerScore + "\t" + "Computer score: " + computerScore);
-            }
-        }
-        
-        // Play 5 games
-        game(5);
-        printWinner(playerScore, computerScore);
-    </script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="style.css">
+        <title>Rock Paper Scissors</title>
+    </head>
+    <body>
+        <h1>Rock Paper Scissors</h1>
+        <div class="main">
+            <div class="computer-section">
+                <div class="player-title">Computer</div>
+                <img src="./images/robot.png" alt="robot">
+            </div>
+            <div class="scoreboard">
+                <div>Score</div>
+                <div class="player-score">Player : </div>
+                <div class="computer-score">Computer : </div>
+            </div>
+            <div class="player-section">
+                <div class="player-title">Player</div>
+                <div class="container">
+                    <div class="rock"><img src="./images/rock.png" alt="rock"></div>
+                    <div class="paper"><img src="./images/paper.png" alt="paper"></div>
+                    <div class="scissors"><img src="./images/scissors.png" alt="scissors"></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-content">Made by LaiZM</div>
+            <div class="credits">Icons from <a href="https://www.flaticon.com">Flaticon.com</a></a></div>
+        </div>
+    </body>
 </html>
