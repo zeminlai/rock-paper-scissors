@@ -16,6 +16,7 @@ h1 {
     text-align: center;
     padding-top: 15px;
     padding-bottom: 15px;
+    font-family: 'Silkscreen', cursive;
 }
 
 img {
@@ -25,14 +26,19 @@ img {
 /* Footer Section */
 .footer {
     background-color:#043b5c;
+    padding: 10px 0 10px 0;
 }
 
 .footer div {
     color: white;
     text-align: center;
     font-size: 12px;
+    font-family: 'Roboto Mono', monospace;
 }
 
+.footer a{
+    color: white;
+}
 /* Main Section */
 .main {
     display: flex;
@@ -63,6 +69,7 @@ img {
 .result-section {
     color: white;
     text-align: center;
+    font-family: 'Roboto Mono', monospace;
 }
 
 /* Scoreboard section */
@@ -70,6 +77,9 @@ img {
     font-size: 20px;
 }
 
+.score {
+    text-decoration: underline;
+}
 
 /* Player Section */
 .player-title {
@@ -87,8 +97,11 @@ img {
     flex: 1;
     border-radius: 10px;
     background-color: #afb9c5;
+    transition: ease-in 0.1s;
+    padding: 5px;
 }
 
 .container div:hover {
-    transform:scale(1.05);
+    transform:scale(1.02);
+    filter: brightness(0.90);
 }
